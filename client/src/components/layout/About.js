@@ -65,10 +65,10 @@ const About = (props) => {
         <a href="https://launchacademy.com/" target="_blank">
           Launch Academy
         </a>{" "}
-        group project. Our team was given a two-week sprint and the tast of creating a review site
-        of our choosing. After ~30 seconds of deliberation, we chose to create an homage to
-        Twitter's <a href="https://twitter.com/dog_rates">@dog_rates</a>. (Which, if you're not
-        familiar, check it out. It's a ray of sunshine in a world that desperately needs one.)
+        group project. Our team was given a two-week sprint and the task of creating a review site
+        of our choosing. After ~30 seconds of deliberation, we chose an homage to Twitter's{" "}
+        <a href="https://twitter.com/dog_rates">@dog_rates</a>. (Which, if you're not familiar,
+        check it out. It's a ray of sunshine in a world that desperately needs one.)
       </p>
       <p>
         We've since moved on to solo projects and job searches, but feel free to use and share
