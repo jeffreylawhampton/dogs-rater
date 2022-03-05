@@ -7,6 +7,11 @@ import MobileLogo from "../../assets/mobile-logo.svg";
 
 const TopBar = ({ user }) => {
   const unauthenticatedListItems = [
+    <li key="about">
+      <Link to="/about" className="header-link">
+        About
+      </Link>
+    </li>,
     <li key="sign-in">
       <Link to="/user-sessions/new" className="header-link">
         Sign in
@@ -20,6 +25,11 @@ const TopBar = ({ user }) => {
   ];
 
   const authenticatedListItems = [
+    <li key="about">
+      <Link to="/about" className="header-link">
+        About
+      </Link>
+    </li>,
     <li key="add-dog">
       <AddDogButton userId={user?.id} />
     </li>,

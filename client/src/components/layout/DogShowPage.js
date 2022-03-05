@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import ReviewTile from "./ReviewTile";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter, Redirect, Link } from "react-router-dom";
 import Fetcher from "./services/Fetcher.js";
 import DogReviewForm from "./DogReviewForm";
 import ErrorList from "./ErrorList";
@@ -178,7 +178,7 @@ const DogShowPage = (props) => {
     emptyReviews = (
       <div className="empty-reviews">
         <h3>It's heckin' empty here</h3>
-        <a onClick={reviewClickHandler}>Be the first to write a review.</a>
+        {user && <a onClick={reviewClickHandler}>Be the first to write a review.</a>}
       </div>
     );
   }
@@ -187,9 +187,15 @@ const DogShowPage = (props) => {
       <h1>{dog.dogName} </h1>
 
       {dogDescription}
-      <a className="review-link" onClick={reviewClickHandler}>
-        Write a review
-      </a>
+      {user ? (
+        <a className="review-link" onClick={reviewClickHandler}>
+          Write a review
+        </a>
+      ) : (
+        <Link to="/user-sessions/new" className="review-link">
+          Sign in to write a review
+        </Link>
+      )}
       <div className="grid-x grid-margin-x fullheight">
         <div
           className="cell small-12 large-5 dog-pic"
