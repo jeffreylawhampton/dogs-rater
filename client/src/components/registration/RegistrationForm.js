@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import FormError from "../layout/FormError";
 import config from "../../config";
 import newTranslateServerErrors from "../../services/newTranslateServerErrors";
@@ -149,6 +150,12 @@ const RegistrationForm = () => {
           <div>
             <input type="submit" className="button" value="Register" />
           </div>
+          <h5>
+            Already have an account?
+            <Link to="/user-sessions/new" className="link">
+              Sign in
+            </Link>
+          </h5>
         </form>
       </div>
     </div>

@@ -1,0 +1,84 @@
+.grid-container.about {
+  background-color: white;
+  padding: 40px 4%;
+  max-width: 1000px;
+  margin: 70px auto;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}
+.contact-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+
+  .icon-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    transition: background-color 500ms ease;
+
+    &:hover {
+      background-color: white;
+      transition: background-color 500ms ease;
+
+      svg {
+        fill: var(--slate);
+        transition: fill 400ms ease;
+      }
+    }
+  }
+
+  svg {
+    height: 17px;
+    fill: white;
+    transition: fill 400ms ease;
+  }
+}
+
+.developer-tile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 12px;
+  background-color: var(--slate);
+  margin-bottom: 30px;
+  color: white;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .developer-pic {
+    border-radius: 100%;
+    width: 100%;
+  }
+
+  a {
+    color: var(--yellow);
+    transition: color 200ms ease;
+
+    &:hover {
+      color: var(--orange);
+    }
+  }
+}
